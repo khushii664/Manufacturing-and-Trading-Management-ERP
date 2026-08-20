@@ -22,8 +22,7 @@ public class ProductService {
     }
 
     public List<Product> getAllProducts() {
-        // JOIN FETCH avoids N+1 queries when serializing category inside each product
-        return productRepository.findAllWithCategory();
+        return productRepository.findAll();
     }
 
     public List<Product> getActiveProducts() {

@@ -31,7 +31,7 @@ public class Product {
      * Many products → one category.
      * LAZY loading — category is only fetched when explicitly accessed.
      */
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
